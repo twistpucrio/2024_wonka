@@ -1,0 +1,226 @@
+[
+    {
+        "nome": "Barra de Chocolate Branco recheada com Brigadeiro",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Branco recheada com Nutella",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Branco recheada com Pistache",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Branco recheada com Doce de Leite",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Branco crocante de Amêndoas Caramelizadas",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Barra de Chocolate Branco crocante de Cookies & Cream",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Trufa de Chocolate Branco com Frutas Vermelhas",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Branco com Brownie",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Bombom de Chocolate Branco",
+        "preço": 20,
+        "categoria": "branco",
+        "tipo": "bombom",
+        "filtro": null
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite recheada com Caramelo e Flor de Sal",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite recheada com Nutella",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite recheada com Ninho",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite recheada com Doce de Leite",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite crocante de Amêndoas Caramelizadas",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite crocante de Avelã",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Barra de Chocolate Ao Leite crocante de Ovomaltine",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Trufa de Chocolate Ao Leite com Frutas Vermelhas",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Ao Leite com Brownie",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Ao Leite com Kinder Bueno",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Ao Leite com Bolo de Cenoura",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Ao Leite com Marshmallow",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Bombom de Chocolate Ao Leite",
+        "preço": 20,
+        "categoria": "ao leite",
+        "tipo": "bombom",
+        "filtro": null
+    },
+    {
+        "nome": "Barra de Chocolate Amargo recheada com Brigadeiro de Café",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Amargo recheada com Nutella",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Amargo recheada com Ninho",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Amargo recheada com Doce de Leite",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "recheada"
+    },
+    {
+        "nome": "Barra de Chocolate Amargo crocante com Amêndoas Caramelizadas",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Barra de Chocolate Amargo crocante com Avelã",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "barra",
+        "filtro": "crocante"
+    },
+    {
+        "nome": "Trufa de Chocolate Amargo com Framboesa",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Amargo com Licor de Cereja",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Trufa de Chocolate Amargo com Laranja",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "trufa",
+        "filtro": null
+    },
+    {
+        "nome": "Bombom de Chocolate Amargo",
+        "preço": 20,
+        "categoria": "amargo",
+        "tipo": "bombom",
+        "filtro": null
+    }
+]
