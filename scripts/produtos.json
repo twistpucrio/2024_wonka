@@ -6,8 +6,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 8.5, 
+        "descrição": "Barra de chocolate com recheio clássico e irresistível de brigadeiro que traz o toque caseiro ao chocolate branco.",
         "carrinho": false
     },
     {
@@ -17,8 +17,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 9.0, 
+        "descrição": "Barra de chocolate com recheio cremoso de Nutella que harmoniza perfeitamente com o sabor doce e suave do chocolate branco.",
         "carrinho": false
     },
     {
@@ -28,8 +28,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 9.5, 
+        "descrição": "Barra de chocolate com recheio sofisticado de pistache que equilibra o doce do chocolate branco com uma leveza crocante.",
         "carrinho": false
     },
     {
@@ -39,8 +39,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 8.5, 
+        "descrição": "Barra de chocolate com recheio de doce de leite cremoso que enriquece o chocolate branco com seu sabor e cremosidade incomparável.",
         "carrinho": false
     },
     {
@@ -50,8 +50,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "crocante",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 7.0, 
+        "descrição": "Barra de chocolate irresistível, onde a crocância das amêndoas caramelizadas se funde ao cremoso chocolate branco, criando uma explosão de texturas e sabores únicos.",
         "carrinho": false
     },
     {
@@ -61,8 +61,8 @@
         "categoria": "branco",
         "tipo": "barra",
         "filtro": "crocante",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 9.5, 
+        "descrição": "Barra de chocolate irresistível, onde o chocolate branco se une ao crocante dos pedaços de cookies, proporcionando uma explosão de sensações irresistíveis a cada mordida.",
         "carrinho": false
     },
     {
@@ -72,8 +72,8 @@
         "categoria": "branco",
         "tipo": "trufa",
         "filtro": null,
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 10.0, 
+        "descrição": "Trufa com recheio de frutas vermelhas que possui um toque de acidez suave que complementa a doçura do chocolate branco.",
         "carrinho": false
     },
     {
@@ -83,8 +83,8 @@
         "categoria": "branco",
         "tipo": "trufa",
         "filtro": null,
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 10.0, 
+        "descrição": "Trufa com recheio de brownie macio e delicioso, que contrasta de forma deliciosa com a leveza do chocolate branco.",
         "carrinho": false
     },
     {
@@ -94,8 +94,8 @@
         "categoria": "branco",
         "tipo": "bombom",
         "filtro": null,
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 7.5, 
+        "descrição": "Bombom de chocolate branco, com recheio cremoso e um sabor inesquecível, perfeito para uma explosão de doçura a cada mordida.",
         "carrinho": false
     },
     {
@@ -105,8 +105,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 8.5, 
+        "descrição": "Barra de chocolate com recheio de caramelo suave com um toque sutil de flor de sal, que realça o sabor do chocolate ao leite com uma combinação irresistível de doce e salgado.",
         "carrinho": false
     },
     {
@@ -116,8 +116,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 7.5, 
+        "descrição": "Barra de chocolate com recheio cremoso de Nutella que adiciona uma camada extra de sabor ao chocolate ao leite.",
         "carrinho": false
     },
     {
@@ -127,8 +127,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 8.0, 
+        "descrição": "Barra de chocolate com um recheio delicioso de leite em pó que traz uma cremosidade aveludada ao chocolate ao leite.",
         "carrinho": false
     },
     {
@@ -138,8 +138,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "recheada",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 6.0, 
+        "descrição": "Barra de chocolate com recheio de doce de leite cremoso que oferece uma doçura na medida certa em contraste com o sabor suave do nosso chocolate ao leite.",
         "carrinho": false
     },
     {
@@ -149,8 +149,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "crocante",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 6.5, 
+        "descrição": "Barra de chocolate ao leite, onde a crocância das amêndoas caramelizadas adiciona uma textura rica e um sabor levemente tostado, criando uma combinação perfeita de doçura e crocância em cada pedaço.",
         "carrinho": false
     },
     {
@@ -160,8 +160,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "crocante",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 9.5, 
+        "descrição": "Barra de chocolate ao leite, onde avelãs crocantes são delicadamente incorporadas, criando um equilíbrio perfeito entre o sabor suave do chocolate e a textura irresistível das avelãs. Uma experiência rica e satisfatória em cada pedaço.",
         "carrinho": false
     },
     {
@@ -171,8 +171,8 @@
         "categoria": "ao leite",
         "tipo": "barra",
         "filtro": "crocante",
-        "medAvalia": , 
-        "descrição": "",
+        "medAvalia": 9.5, 
+        "descrição": "Barra de chocolate ao leite com pedaços crocantes de Ovomaltine, onde a cremosidade do chocolate encontra a crocância única de Ovomaltine, proporcionando uma explosão de sabores e texturas irresistíveis a cada mordida.",
         "carrinho": false
     },
     {
