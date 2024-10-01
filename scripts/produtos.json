@@ -8,7 +8,10 @@
         "filtro": "recheada",
         "medAvalia": 8.5, 
         "descrição": "Barra de chocolate com recheio clássico e irresistível de brigadeiro que traz o toque caseiro ao chocolate branco.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 2,
@@ -19,7 +22,10 @@
         "filtro": "recheada",
         "medAvalia": 9.0, 
         "descrição": "Barra de chocolate com recheio cremoso de Nutella que harmoniza perfeitamente com o sabor doce e suave do chocolate branco.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 3,
@@ -30,7 +36,10 @@
         "filtro": "recheada",
         "medAvalia": 9.5, 
         "descrição": "Barra de chocolate com recheio sofisticado de pistache que equilibra o doce do chocolate branco com uma leveza crocante.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 4,
@@ -41,7 +50,10 @@
         "filtro": "recheada",
         "medAvalia": 8.5, 
         "descrição": "Barra de chocolate com recheio de doce de leite cremoso que enriquece o chocolate branco com seu sabor e cremosidade incomparável.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 5,
@@ -52,7 +64,10 @@
         "filtro": "crocante",
         "medAvalia": 7.0, 
         "descrição": "Barra de chocolate irresistível, onde a crocância das amêndoas caramelizadas se funde ao cremoso chocolate branco, criando uma explosão de texturas e sabores únicos.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 6,
@@ -63,7 +78,10 @@
         "filtro": "crocante",
         "medAvalia": 9.5, 
         "descrição": "Barra de chocolate irresistível, onde o chocolate branco se une ao crocante dos pedaços de cookies, proporcionando uma explosão de sensações irresistíveis a cada mordida.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 7,
@@ -74,7 +92,10 @@
         "filtro": null,
         "medAvalia": 10.0, 
         "descrição": "Trufa com recheio de frutas vermelhas que possui um toque de acidez suave que complementa a doçura do chocolate branco.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 8,
@@ -85,7 +106,10 @@
         "filtro": null,
         "medAvalia": 10.0, 
         "descrição": "Trufa com recheio de brownie macio e delicioso, que contrasta de forma deliciosa com a leveza do chocolate branco.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 9,
@@ -96,7 +120,10 @@
         "filtro": null,
         "medAvalia": 7.5, 
         "descrição": "Bombom de chocolate branco, com recheio cremoso e um sabor inesquecível, perfeito para uma explosão de doçura a cada mordida.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 10,
@@ -107,7 +134,10 @@
         "filtro": "recheada",
         "medAvalia": 8.5, 
         "descrição": "Barra de chocolate com recheio de caramelo suave com um toque sutil de flor de sal, que realça o sabor do chocolate ao leite com uma combinação irresistível de doce e salgado.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 11,
@@ -118,7 +148,10 @@
         "filtro": "recheada",
         "medAvalia": 7.5, 
         "descrição": "Barra de chocolate com recheio cremoso de Nutella que adiciona uma camada extra de sabor ao chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 12,
@@ -129,7 +162,10 @@
         "filtro": "recheada",
         "medAvalia": 8.0, 
         "descrição": "Barra de chocolate com um recheio delicioso de leite em pó que traz uma cremosidade aveludada ao chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 13,
@@ -140,7 +176,10 @@
         "filtro": "recheada",
         "medAvalia": 6.0, 
         "descrição": "Barra de chocolate com recheio de doce de leite cremoso que oferece uma doçura na medida certa em contraste com o sabor suave do nosso chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 14,
@@ -151,7 +190,10 @@
         "filtro": "crocante",
         "medAvalia": 6.5, 
         "descrição": "Barra de chocolate ao leite, onde a crocância das amêndoas caramelizadas adiciona uma textura rica e um sabor levemente tostado, criando uma combinação perfeita de doçura e crocância em cada pedaço.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 15,
@@ -162,7 +204,10 @@
         "filtro": "crocante",
         "medAvalia": 9.5, 
         "descrição": "Barra de chocolate ao leite, onde avelãs crocantes são delicadamente incorporadas, criando um equilíbrio perfeito entre o sabor suave do chocolate e a textura irresistível das avelãs. Uma experiência rica e satisfatória em cada pedaço.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 16,
@@ -173,7 +218,10 @@
         "filtro": "crocante",
         "medAvalia": 9.5, 
         "descrição": "Barra de chocolate ao leite com pedaços crocantes de Ovomaltine, onde a cremosidade do chocolate encontra a crocância única de Ovomaltine, proporcionando uma explosão de sabores e texturas irresistíveis a cada mordida.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 17,
@@ -184,7 +232,10 @@
         "filtro": null,
         "medAvalia": 6.5, 
         "descrição": "Trufa de chocolate ao leite com um recheio de frutas vermelhas, com um toque ácido que complementa a suavidade do chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 18,
@@ -195,7 +246,10 @@
         "filtro": null,
         "medAvalia": 9.0, 
         "descrição": "Trufa de chocolate ao leite com um recheio denso e rico de brownie, que harmoniza perfeitamente com o chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 19,
@@ -206,7 +260,10 @@
         "filtro": null,
         "medAvalia": 10.0, 
         "descrição": "Inspirado no clássico Kinder Bueno, esta trufa de chocolate ao leite com  recheio cremoso traz uma experiência inesquecível em conjunto com o chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 20,
@@ -217,7 +274,10 @@
         "filtro": null,
         "medAvalia": 8.0, 
         "descrição": "Trufa de chocolate ao leite com recheio de bolo de cenoura macio, com uma camada de chocolate que faz lembrar sobremesas caseiras.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 21,
@@ -228,7 +288,10 @@
         "filtro": null,
         "medAvalia": 7.5, 
         "descrição": "Trufa de chocolate ao leite com um centro macio de marshmallow que oferece uma leveza açucarada em união com o chocolate ao leite.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 22,
@@ -239,7 +302,10 @@
         "filtro": null,
         "medAvalia": 7.0, 
         "descrição": "Bombom de chocolate ao leite, trazendo uma explosão de sabores em cada mordida junto com uma doçura suave.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 23,
@@ -250,7 +316,10 @@
         "filtro": "recheada",
         "medAvalia": 5.0, 
         "descrição": "Barra de chocolate amargo com um recheio de brigadeiro com um toque de café, que intensifica o sabor do chocolate amargo com uma dose de energia e sabor marcante.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 24,
@@ -261,7 +330,10 @@
         "filtro": "recheada",
         "medAvalia": 7.0, 
         "descrição": "Barra de chocolate amargo com um toque indulgente da Nutella contrasta com a intensidade do chocolate amargo, criando um equilíbrio entre amargo e doce.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 25,
@@ -272,7 +344,10 @@
         "filtro": "recheada",
         "medAvalia": 7.0, 
         "descrição": "Barra de chocolate amargo com um recheio cremoso de leite em pó que suaviza o sabor robusto do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 26,
@@ -283,7 +358,10 @@
         "filtro": "recheada",
         "medAvalia": 6.0, 
         "descrição": "Barra de chocolate amargo com recheio de doce de leite que traz um toque doce e cremoso ao sabor intenso do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 27,
@@ -294,7 +372,10 @@
         "filtro": "crocante",
         "medAvalia": 5.5, 
         "descrição": "Barra de chocolate amargo com pedaços crocantes de amêndoas caramelizadas que adicionam uma textura rica ao chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 28,
@@ -305,7 +386,10 @@
         "filtro": "crocante",
         "medAvalia": 5.5, 
         "descrição": "Barra de chocolate amargo com avelãs crocantes que trazem um sabor levemente torrado ao contraste do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 29,
@@ -316,7 +400,10 @@
         "filtro": null,
         "medAvalia": 3.0, 
         "descrição": "Trufa de chocolate amargo com recheio de framboesa com uma acidez delicada, que complementa o sabor profundo do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 30,
@@ -327,7 +414,10 @@
         "filtro": null,
         "medAvalia": 7.0, 
         "descrição": "Trufa de chocolate amargo com recheio de licor de cereja que combina a intensidade da fruta e do álcool com o sabor encorpado do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 31,
@@ -338,7 +428,10 @@
         "filtro": null,
         "medAvalia": 1.5, 
         "descrição": "Trufa de chocolate amargo com recheio com notas cítricas de laranja, que oferecem um frescor ao sabor robusto do chocolate amargo.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     },
     {
         "id": 32,
@@ -349,6 +442,9 @@
         "filtro": null,
         "medAvalia": 6.5, 
         "descrição": "Bombom de chocolate amargo, perfeito para quem aprecia sabores mais intensos.",
-        "carrinho": false
+        "carrinho": false,
+        "qtd_carrinho": 0,
+        "imagem": "img/placeholder.png",
+        "favorito": false
     }
 ]
