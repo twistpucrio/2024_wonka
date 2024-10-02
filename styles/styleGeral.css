@@ -1,24 +1,6 @@
 body{
   margin: 0 auto;
-  background-color: rgb(250, 234, 215);
-}
-
-nav{
-  background-color: #7B3B06;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 2%;
-}
-
-nav a{
-  text-decoration: none;
-  color: white;
-  font-size: larger;
-  padding: 2%;
-}
-
-nav a:hover{
-  box-shadow: 0px 0px 10px black;
+  background-color: #faead7;
 }
 
 h2{
@@ -31,7 +13,163 @@ aside {
     margin-right: 15px;
     float: left;
     background-color: antiquewhite;
+}
+
+/* parte da nav */
+#navigator{
+  background-color: #7B3B06;
+  padding-top: 0.7%;
+  padding-bottom: 0.7%;
+  padding-left: 1%;
+  display: flex;
+  justify-items: center;
+}
+
+#logo-wonka{
+  width: 8em;
+}
+
+@keyframes pulsar {
+  0% {
+      transform: scale(1);
   }
+
+  50% {
+      transform: scale(1.1);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+#logo-wonka:hover{
+  animation: pulsar 0.6s infinite;
+
+}
+
+.nav-texto{
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#texto-nav-div{
+  width: 33%;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#texto-nav-div a{
+  display: inline-block;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+#texto-nav-div a:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 90%;
+  margin-top: 2%;
+}
+
+#texto-nav-div a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+
+#logo-nav-div{
+  width: 33%;
+}
+
+#imagens-nav-div{
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3%;
+}
+
+#imagens-nav-div a{
+  margin-left: 10%;
+  padding: 1%;
+}
+
+#coracao-nav{
+  width: 2.6em;
+}
+
+@keyframes mexendo-coracao {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(2px, 2px) rotate(10deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-2px, 2px) rotate(-10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#coracao-nav:hover{
+  animation: mexendo-coracao 0.40s infinite;
+}
+
+#cesta-nav{
+  width: 3em;
+}
+
+@keyframes mexendo-cesta {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#cesta-nav:hover{
+  animation: mexendo-cesta 0.60s infinite;
+}
+
+/* fim nav */
+
+/* footer */
+#footer{
+  background-color: #7B3B06;
+  color: white;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 0.7%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#footer-principal{
+  font-size: medium;
+}
+
+#footer-nomes{
+  font-size: small;
+}
+
+#github-logo{
+  width: 2.5em;
+  margin-bottom: -0.5%;
+}
+
+#saiba-mais-link{
+  text-decoration: none;
+  color: white;
+}
+
+/* fim footer */
 
 .imagem-produto{
   width: 10%;
