@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonka</title>
-
+    <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/styleGeral.css">
+    
 
 </head>
 <body>
@@ -32,8 +33,11 @@
                 <h3>Filtros</h3>
             </aside>
             <article id="produtos-busca">
-                <input type="text" placeholder="🔍">
+                <input type="text" id="caixaTexto">
+                <button type="button" id="btnBusca" name="btnBusca" class="btn">🔍</button>
+
             </article>
+            <div id="produtos"></div>
 
         </section>
         <footer id="footer">
