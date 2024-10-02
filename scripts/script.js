@@ -1,16 +1,32 @@
-//teste para pegar os dados
-function fetchJSONData() {
-    fetch("scripts/produtos.json")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error
-                    (`HTTP error! Status: ${res.status}`);
+////////////////////////////////////////////////////////////////////////////////isabel
+function buscarProdutos() {
+    fetch("scripts/produtos.json").then((response) => {
+        response.json().then((produtos) => {
+            const termoBusca = document.getElementById('caixaTexto').value.toLowerCase();
+
+            // filtra os produtos cujo nome contém o termo de busca
+            const produtosFiltrados = produtos.filter((produto) =>
+                produto.nome.toLowerCase().includes(termoBusca)
+            );
+
+            // mostra os produtos filtrados no console
+            if (produtosFiltrados.length === 0) {
+                console.log('Nenhum produto encontrado');
+            } else {
+                console.log('Produtos encontrados:', produtosFiltrados);
             }
-            return res.json();
-        })
-        .then((data) =>
-            console.log(data))
-        .catch((error) =>
-            console.error("Unable to fetch data:", error));
+        });
+    });
 }
-fetchJSONData();
+
+window.addEventListener("load", function() {
+    let btnBusca = document.querySelector("#btnBusca");
+
+    btnBusca.addEventListener("click", function() {
+        buscarProdutos();
+    });
+
+    // carregar os dados ao abrir a página (sem filtro)
+    buscarProdutos();
+});
+//////////////////////////////////////////////////////////////////////////////////
