@@ -37,6 +37,7 @@ function exibirProdutos(produtos) {
 
     produtos.forEach(produto => {
         const produtoDiv = document.createElement('div');
+        produtoDiv.setAttribute("id", `${produto.id}`);
         const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
         produtoDiv.innerHTML = `
             <h2>${produto.nome}</h2>
