@@ -35,21 +35,26 @@ function buscarAmargos() {
        });
    });
 }
-window.addEventListener("load", function() {
-    // carregar os dados ao abrir a página (sem filtro)
-    buscarAmargos();
+window.addEventListener("DOMContentLoaded", function() {
+    
+    let amargoLink = document.querySelector("#amargo");
     let btnBusca = document.querySelector("#btnBusca");
 
-    btnBusca.addEventListener("click", function() {
-       buscarProdutos();
+    
+    amargoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        buscarAmargos();
     });
 
     
+    btnBusca.addEventListener("click", function() {
+       buscarProdutos();
+    });
 });
 
 function exibirProdutos(produtos) {
    const containerProdutos = document.getElementById('produtos');
-   containerProdutos.innerHTML = ''; // Limpa o contêiner existente
+   containerProdutos.innerHTML = ''; 
 
    produtos.forEach(produto => {
        const produtoDiv = document.createElement('div');
@@ -62,7 +67,7 @@ function exibirProdutos(produtos) {
            <img src="${produto.imagem}" class='imagem-produto'>
            
        `;
-       containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
+       containerProdutos.appendChild(produtoDiv); 
    });
 }
 

@@ -35,20 +35,27 @@ function buscarBrancos() {
        });
    });
 }
-window.addEventListener("load", function() {
+window.addEventListener("DOMContentLoaded", function() {
+    
+    let brancoLink = document.querySelector("#branco");
     let btnBusca = document.querySelector("#btnBusca");
 
+    
+    brancoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        buscarBrancos();
+    });
+
+    
     btnBusca.addEventListener("click", function() {
        buscarProdutos();
     });
-
-    // carregar os dados ao abrir a página (sem filtro)
-    buscarBrancos();
 });
+    
 
 function exibirProdutos(produtos) {
    const containerProdutos = document.getElementById('produtos');
-   containerProdutos.innerHTML = ''; // Limpa o contêiner existente
+   containerProdutos.innerHTML = ''; 
 
    produtos.forEach(produto => {
        const produtoDiv = document.createElement('div');
@@ -61,7 +68,7 @@ function exibirProdutos(produtos) {
            <img src="${produto.imagem}" class='imagem-produto'>
            
        `;
-       containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
+       containerProdutos.appendChild(produtoDiv); 
    });
 }
 
