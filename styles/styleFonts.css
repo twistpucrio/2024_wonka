@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Kanit";
+    src: url(../fonts/Kanit/Kanit-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(../fonts/Outfit/static/Outfit-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Varela";
+    src: url(../fonts/Varela_Round/VarelaRound-Regular.ttf);
+}

@@ -12,12 +12,18 @@
 <body>
     <div id="conteudo">
         <nav id="navigator">
-            <a href="index.html">Wonka</a>
-            <a href="busca.html" id="branco">Branco</a>
-            <a href="busca.html" id="aoLeite">Ao Leite</a>
-            <a href="busca.html" id="amargo">Amargo</a>
-            <a href="favoritos.html">Favoritos</a>
-            <a href="carrinho.html">Carrinho</a>
+            <div id="logo-nav-div">
+                <a href="index.html"><img src="img/wonka-logo.png" alt="Logo do site escrito 'Wonka' com um chápeuzinho no W" id="logo-wonka"></a>
+            </div>
+            <div id="texto-nav-div">
+                <a href="branco.html" class="nav-texto">Branco</a>
+                <a href="aoLeite.html" class="nav-texto">Ao Leite</a>
+                <a href="amargo.html" class="nav-texto">Amargo</a>
+            </div>
+            <div id="imagens-nav-div">
+                <a href="favoritos.html"><img src="img/coracao3.png" alt="Coração vermelho" id="coracao-nav"></a>
+                <a href="carrinho.html"><img src="img/carrinho.png" alt="Cesta de compras" id="cesta-nav"></a>
+            </div>
         </nav>
         <input type="text" id="caixaTexto">
                 <button type="button" id="btnBusca" name="btnBusca" class="btn">🔍</button>
@@ -26,13 +32,13 @@
         <div id="produtos"></div>
         <h2 id="novidades-home">Fique por dentro das nossas novidades</h2>
         <footer id="footer">
-            <p>Site desenvolvido para o programa TWIST 2024.2</p>
-            <p>Fernanda Figueiredo</p>
-            <p>Isabel Amaral</p>
-            <p>Luiza Régnier</p>
-            <p>Maria Luiza Dutra</p>
-            <p>Github</p>
-            <p><a href="sobrenos.html">Saiba mais sobre nós</a></p>
+            <p id="footer-principal">Site desenvolvido para o programa TWIST 2024.2</p>
+            <p id="footer-nomes">Fernanda Figueiredo <br>
+            Isabel Amaral <br>
+            Luiza Régnier <br>
+            Maria Luiza Dutra</p>
+            <a href="https://github.com/twistpucrio/wonka" target="_blank"> <img src="img/github.png" alt="Logo do site GitHub" id="github-logo"></a>
+            <p><a href="sobrenos.html" id="saiba-mais-link">Saiba mais sobre nós</a></p>
         </footer>
     </div>
 </body>
