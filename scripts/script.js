@@ -3,6 +3,7 @@
      fetch("scripts/produtos.json").then((response) => {
          response.json().then((produtos) => {
              const termoBusca = document.getElementById('caixaTexto').value.toLowerCase();
+             document.getElementById("produtos-mais-vendidos").innerText = "";
 
              // filtra os produtos cujo nome contém o termo de busca
              const produtosFiltrados = produtos.filter((produto) =>
@@ -11,7 +12,8 @@
 
              // mostra os produtos filtrados no console
             if (produtosFiltrados.length === 0) {
-                 console.log('Nenhum produto encontrado');
+                 alert('Nenhum produto encontrado');
+                 exibirProdutos('');
             } else {
                 console.log('Produtos encontrados:', produtosFiltrados);
                 exibirProdutos(produtosFiltrados);
@@ -20,6 +22,19 @@
      });
  }
 
+ function buscarMaisVendidos() {
+    fetch("scripts/produtos.json").then((response) => {
+        response.json().then((produtos) => {
+            const termoBusca = 'ninho';
+            
+            // filtra os produtos cujo nome contém o termo de busca
+            const produtosFiltrados = produtos.filter((produto) =>
+                produto.nome.toLowerCase().includes(termoBusca)
+            );
+            exibirProdutos(produtosFiltrados);
+        });
+    });
+}
  window.addEventListener("load", function() {
      let btnBusca = document.querySelector("#btnBusca");
 
@@ -28,7 +43,7 @@
      });
 
      // carregar os dados ao abrir a página (sem filtro)
-     buscarProdutos();
+     buscarMaisVendidos();
 });
 
 function exibirProdutos(produtos) {
