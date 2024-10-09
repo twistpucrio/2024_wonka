@@ -21,7 +21,7 @@ function buscarProdutos() {
         });
     });
 }
-
+//oi
 function buscarBrancos() {
    fetch("scripts/produtos.json").then((response) => {
        response.json().then((produtos) => {
