@@ -1,8 +1,7 @@
-
 function buscarProdutos(busca, categoria) {
     fetch("scripts/produtos.json").then((response) => {
         response.json().then((produtos) => {
-            document.getElementById("produtos-mais-vendidos").innerText = "";
+            document.getElementById("produtos").innerText = "";
 
             let produtosFiltrados = produtos;
             // filtra os produtos cujo nome contém o termo de busca
@@ -20,7 +19,6 @@ function buscarProdutos(busca, categoria) {
 
             // mostra os produtos filtrados no console
            if (produtosFiltrados.length === 0) {
-                alert('Nenhum produto encontrado');
                 exibirProdutos('');
            } else {
                console.log('Produtos encontrados:', produtosFiltrados);
@@ -60,6 +58,7 @@ function buscarMaisVendidos() {
 }
 
 function getQueryParams() {
+    console.log(location);
    if (location.href.indexOf('categoria=') != -1) {
        const categoria = location.href.split('categoria=')[1];
        let categoriaDecoded = decodeURI(categoria);
@@ -81,8 +80,39 @@ function getQueryParams() {
     }
 }
 
+function exibirProdutos(produtos) {
+    const containerProdutos = document.getElementById('produtos');
+    containerProdutos.innerHTML = ''; // Limpa o contêiner existente
+
+    if (produtos == ''){
+        containerProdutos.innerHTML = '<h4 id="produto-não-encontrado">Nenhum produto encontrado =(</h4>';
+        return;
+    }
+ 
+    produtos.forEach(produto => {
+        const produtoDiv = document.createElement('div');
+        // produtoDiv.setAttribute("id", `${produto.id}`);
+        const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
+        produtoDiv.innerHTML = `
+            <img src="${produto.imagem}" id="${produto.id}" class='imagem-produto' alt='${produto.descricao}'>
+            <p  class="nome-produto">${produto.nome}</p>
+            <p  class="preco-produto">R$${preco}</p>
+            <p><button class="botao-produto" >Adicionar ao carrinho</button></p>
+        `;
+        containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
+    });
+ }
+
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
+    let textoInput = document.getElementById('caixaTexto');
+
+
+    textoInput.addEventListener('keydown', function(event) {
+        if (event.key == 'Enter') {
+            navegaParaBusca();
+        }
+    });
 
     btnBusca.addEventListener("click", function() {
        navegaParaBusca();
@@ -102,28 +132,17 @@ window.addEventListener("load", function() {
         event.preventDefault(); 
         navegaParaBuscaPorCategoria('branco');
     });
+
+    let amargoLink = document.querySelector("#amargo");
+    amargoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('amargo');
+    });
+
+    let aoleiteLink = document.querySelector("#ao-leite");
+    aoleiteLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('ao-leite');
+    });
     
 });
-
-function exibirProdutos(produtos) {
-   const containerProdutos = document.getElementById('produtos');
-   containerProdutos.innerHTML = ''; // Limpa o contêiner existente
-
-   produtos.forEach(produto => {
-       const produtoDiv = document.createElement('div');
-       produtoDiv.setAttribute("id", `${produto.id}`);
-       const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
-       produtoDiv.innerHTML = `
-           <h2>${produto.nome}</h2>
-           <p>${produto.descricao}<p/>
-           <p>Preço: R$${preco}</p>
-           <img src="${produto.imagem}" class='imagem-produto'>
-           
-       `;
-       containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
-   });
-}
-
-
-
-
