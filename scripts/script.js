@@ -35,14 +35,14 @@ function navegaParaBusca() {
 
    const { categoria } = getQueryParams(); 
    if (categoria) {
-       location.href='index.html?categoria=' + categoria + '&busca=' + termoBusca;
+       location.href='busca.html?categoria=' + categoria + '&busca=' + termoBusca;
    } else{
-       location.href="index.html?busca=" + termoBusca;
+       location.href="busca.html?busca=" + termoBusca;
    }
 }
 
 function navegaParaBuscaPorCategoria(categoria) {
-   location.href="index.html?categoria=" + categoria;
+   location.href="busca.html?categoria=" + categoria;
 }
 
 function buscarMaisVendidos() {
