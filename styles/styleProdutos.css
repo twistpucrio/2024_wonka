@@ -1,0 +1,48 @@
+.imagem-produto-detalhe {
+    float: left;            
+    margin-right: 10px;     
+    width: 40%;            
+    height: auto;            
+    margin-top: -340px;      
+    border-radius: 2%;
+}
+
+#main{
+
+  border: 1px solid white;
+  background-color: white;
+  height: 7rem;
+  border-radius: 5%;
+  margin: 5%;
+  padding: 15rem;
+
+}
+
+h1{
+    font-size: 3rem;
+    float:right;
+    margin-left:50%;
+    text-align: center;
+    margin-top: 0rem;
+    
+    
+    
+}
+
+h3{
+    font-size: 3rem;
+    float:right;
+    margin-left:50%;
+    margin-top: -20px; 
+    text-align: center; 
+    
+}
+
+h4{
+    font-size: 1.7rem;
+    float:right;
+    margin-left:49%;
+    margin-top: -250px;  
+    font-weight: normal;
+    text-align: center;
+}
