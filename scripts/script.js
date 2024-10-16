@@ -144,7 +144,7 @@ function verificarFiltros() {
         return;
     }
     buscarProdutos(tiposSelecionados); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  }
+}
 
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
