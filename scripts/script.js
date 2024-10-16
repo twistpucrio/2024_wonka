@@ -81,7 +81,6 @@ function getQueryParams() {
     }
 }
 
-
 function exibirProdutos(produtos) {
     const containerProdutos = document.getElementById('produtos');
     containerProdutos.innerHTML = ''; // Limpa o contêiner existente
@@ -113,11 +112,44 @@ function exibirProdutos(produtos) {
     });
 }
 
+function mostraTodos(){
+    fetch("scripts/produtos.json").then((response) => {
+        response.json().then((produtos) => {
+            document.getElementById("produtos").innerText = "";
+
+            let produtosFiltrados = produtos;
+
+            // Mostra os produtos filtrados no console
+           if (produtosFiltrados.length === 0) {
+                exibirProdutos('');
+           } else {
+               console.log('Produtos encontrados:', produtosFiltrados);
+               exibirProdutos(produtosFiltrados);
+           }
+        });
+    });
+}
+
+function verificarFiltros() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let tiposSelecionados = [];
+  
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            tiposSelecionados.push(checkbox.name);
+        }
+    });
+  
+    if (tiposSelecionados.length == 0) {
+        return;
+    }
+    buscarProdutos(tiposSelecionados); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  }
 
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
     let textoInput = document.getElementById('caixaTexto');
-
+    let btnFiltro = document.getElementById('filtrar');
 
     textoInput.addEventListener('keydown', function(event) {
         if (event.key == 'Enter') {
@@ -127,6 +159,10 @@ window.addEventListener("load", function() {
 
     btnBusca.addEventListener("click", function() {
        navegaParaBusca();
+    });
+
+    btnFiltro.addEventListener("click", function(){
+        verificarFiltros(); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     });
 
     // const produtoId = getProdutoId();
@@ -141,7 +177,11 @@ window.addEventListener("load", function() {
        buscarProdutos(busca, categoria);
     } else {
         // Carregar os dados ao abrir a página (sem filtro)
-        buscarMaisVendidos();
+        if (location.href.indexOf('index.html') != -1){
+            buscarMaisVendidos();
+        } else {
+            mostraTodos();
+        }
     }
 
     let brancoLink = document.querySelector("#branco");

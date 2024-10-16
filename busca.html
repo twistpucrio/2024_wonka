@@ -31,7 +31,15 @@
         <section id="main">
             <div id="pag-busca">
                 <aside id="filtros">
-                    <h3>Filtros</h3>
+                    <form id="filtro-busca">
+                        <legend class="filtros-legenda">Filtros</legend>
+                        <label for="barra"><input type="checkbox" class="botao-filtro" id="barra" name="barra" >Barra <br></label>
+                        <label for="trufa"><input type="checkbox" class="botao-filtro" id="trufa" name="trufa" >Trufa <br></label>
+                        <label for="bombom"><input type="checkbox" class="botao-filtro" id="bombom" name="bombom" >Bombom <br></label>
+                        <div id="btnFiltra">
+                            <button id="filtrar">Aplicar filtros</button>
+                        </div>
+                    </form>
                 </aside>
                 <div id="parte-busca">
                     <input type="text" id="caixaTexto" placeholder="Pesquisar...">

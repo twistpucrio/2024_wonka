@@ -301,7 +301,20 @@ body{
 }
 
 #btnBusca{
+  width:2.2rem;
+  height:2.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(230, 170, 92);
+  margin-left: 0.2rem;
+}
 
+#btnBusca:hover{
+  background-color: rgb(218, 152, 67);
+}
+
+#btnBusca:active{
+  background-color: rgb(230, 170, 92);
 }
 
 #caixaTexto{
@@ -316,12 +329,53 @@ body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#filtros {
+#filtro-busca {
   display: block;
   width: 12rem;
-  height: 100%;
   float: left;
   background-color: rgb(230, 170, 92);
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  padding: 1rem;
+  border-radius: 20%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+}
+
+.filtros-legenda{
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 0rem 0rem 1rem 1rem;
+}
+
+.botao-filtro{
+  margin: 0rem 1.2rem 1.2rem 1.2rem;
+  font-size: large;
+}
+
+#btnFiltra{
+  text-align: center;
+}
+
+#filtrar{
+  font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 10%;
+  border: none;
+  margin-top: 0.2em;
+  padding: 0.6rem;
+  background: #8a523a;
+  color: ghostwhite;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+}
+
+#filtrar:hover{
+  background: #7e4831;
+}
+
+#filtrar:active{
+  background: #8a523a;
 }
 
 #parte-busca{
