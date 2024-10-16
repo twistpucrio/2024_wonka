@@ -10,7 +10,7 @@
         "descricao": "Barra de chocolate com recheio clássico e irresistível de brigadeiro que traz o toque caseiro ao chocolate branco.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barraBrancaBrig.webp",
         "favorito": false
     },
     {
@@ -24,7 +24,7 @@
         "descricao": "Barra de chocolate com recheio cremoso de Nutella que harmoniza perfeitamente com o sabor doce e suave do chocolate branco.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barraBrancaNutella.webp",
         "favorito": false
     },
     {
@@ -38,7 +38,7 @@
         "descricao": "Barra de chocolate com recheio sofisticado de pistache que equilibra o doce do chocolate branco com uma leveza crocante.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barraBrancoPistache.webp",
         "favorito": false
     },
     {
@@ -52,7 +52,7 @@
         "descricao": "Barra de chocolate com recheio de doce de leite cremoso que enriquece o chocolate branco com seu sabor e cremosidade incomparável.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barraBrancoDocedeLeite.webp",
         "favorito": false
     },
     {
@@ -66,7 +66,7 @@
         "descricao": "Barra de chocolate irresistível, onde a crocância das amêndoas caramelizadas se funde ao cremoso chocolate branco, criando uma explosão de texturas e sabores únicos.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barrabrancocamendoacara.webp",
         "favorito": false
     },
     {
@@ -80,7 +80,7 @@
         "descricao": "Barra de chocolate irresistível, onde o chocolate branco se une ao crocante dos pedaços de cookies, proporcionando uma explosão de sensações irresistíveis a cada mordida.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/barrabrancocookies.webp",
         "favorito": false
     },
     {
@@ -94,7 +94,7 @@
         "descricao": "Trufa com recheio de frutas vermelhas que possui um toque de acidez suave que complementa a doçura do chocolate branco.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/TrufaBrancoVermelhas.webp",
         "favorito": false
     },
     {
@@ -108,7 +108,7 @@
         "descricao": "Trufa com recheio de brownie macio e delicioso, que contrasta de forma deliciosa com a leveza do chocolate branco.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/TrufaBrancoBrownie.webp",
         "favorito": false
     },
     {
@@ -122,7 +122,7 @@
         "descricao": "Bombom de chocolate branco, com recheio cremoso e um sabor inesquecível, perfeito para uma explosão de doçura a cada mordida.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/bombombrancosimples.webp",
         "favorito": false
     },
     {
