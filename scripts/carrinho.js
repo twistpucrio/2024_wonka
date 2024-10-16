@@ -7,7 +7,8 @@ const CarrinhoModel = (() => {
             if (produtoExistente) {
                 produtoExistente.qtd_carrinho++;
             } else {
-                produto.qtd_carrinho = 1; // Inicializa a quantidade
+                produto.qtd_carrinho = 1; 
+                produto.carrinho = 'true';
                 carrinho.push(produto);
             }
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
@@ -29,7 +30,7 @@ const CarrinhoModel = (() => {
     };
 })();
 
-// Função para carregar o produto específico
+
 async function carregarProduto() {
     const produtoId = getProdutoId();
     const response = await fetch('scripts/produtos.json');
@@ -43,7 +44,7 @@ async function carregarProduto() {
     }
 }
 
-// Exibir o produto na página
+
 function exibirProduto(produto) {
     const divProduto = document.getElementById('produto');
     divProduto.innerHTML = `
@@ -55,17 +56,17 @@ function exibirProduto(produto) {
     `;
 }
 
-// Adicionar o produto ao carrinho
+
 function adicionarAoCarrinho(produto) {
     CarrinhoModel.adicionarItem(produto);
     alert(`${produto.nome} foi adicionado ao carrinho!`);
 }
 
-// Função para obter o ID do produto da URL
+
 function getProdutoId() {
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get('produto'));
 }
 
-// Carrega o produto ao iniciar a página
+
 document.addEventListener('DOMContentLoaded', carregarProduto);
