@@ -94,14 +94,12 @@ function exibirProdutos(produtos) {
     produtos.forEach(produto => {
         const produtoDiv = document.createElement('div');
         // produtoDiv.setAttribute("id", `${produto.id}`);
-        produtoDiv.classList.add('produto-item'); 
         const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
-        
         produtoDiv.innerHTML = `
-            <h2>${produto.nome}</h2>
-            <p>${produto.descricao}</p>
-            <p>Preço: R$${preco}</p>
-            <img src="${produto.imagem}" class='imagem-produto'>
+            <img src="${produto.imagem}" id="${produto.id}" class='imagem-produto' alt='${produto.descricao}'>
+            <p  class="nome-produto">${produto.nome}</p>
+            <p  class="preco-produto">R$${preco}</p>
+            <p><button class="botao-produto" >Adicionar ao carrinho</button></p>
         `;
         
         // Adiciona o evento de clique ao produto

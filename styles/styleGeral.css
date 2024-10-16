@@ -238,12 +238,12 @@ body{
 }
 
 #produtos div {
-  height: 21rem;
+  height: 22rem;
   border: 1px solid white;
   background-color: white;
   border-radius: 20%;
   margin: 10px;
-  padding: 2rem;
+  padding: 8% 5% 5% 5%;
   text-align: center;
 }
 
