@@ -4,7 +4,8 @@ function buscarProdutos(busca, categoria) {
             document.getElementById("produtos").innerText = "";
 
             let produtosFiltrados = produtos;
-            // filtra os produtos cujo nome contém o termo de busca
+
+            // Filtra os produtos cujo nome contém o termo de busca
             if (busca) {
                 produtosFiltrados = produtosFiltrados.filter((produto) =>
                     produto.nome.toLowerCase().includes(busca)
@@ -17,7 +18,7 @@ function buscarProdutos(busca, categoria) {
                );
             }
 
-            // mostra os produtos filtrados no console
+            // Mostra os produtos filtrados no console
            if (produtosFiltrados.length === 0) {
                 exibirProdutos('');
            } else {
@@ -48,7 +49,7 @@ function buscarMaisVendidos() {
        response.json().then((produtos) => {
            const termoBusca = 'ninho';
            
-           // filtra os produtos cujo nome contém o termo de busca
+           // Filtra os produtos cujo nome contém o termo de busca
            const produtosFiltrados = produtos.filter((produto) =>
                produto.nome.toLowerCase().includes(termoBusca)
            );
@@ -80,28 +81,84 @@ function getQueryParams() {
     }
 }
 
+// Função para buscar o produto pelo ID no arquivo JSON
+function buscarProdutoPorId(idProduto) {
+    return fetch("scripts/produtos.json")
+        .then((response) => response.json())
+        .then((produtos) => produtos.find(produto => produto.id === idProduto));
+}
+
 function exibirProdutos(produtos) {
     const containerProdutos = document.getElementById('produtos');
     containerProdutos.innerHTML = ''; // Limpa o contêiner existente
-
+  
     if (produtos == ''){
         containerProdutos.innerHTML = '<h4 id="produto-não-encontrado">Nenhum produto encontrado =(</h4>';
         return;
     }
- 
+
     produtos.forEach(produto => {
         const produtoDiv = document.createElement('div');
         // produtoDiv.setAttribute("id", `${produto.id}`);
+        produtoDiv.classList.add('produto-item'); 
         const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
+        
         produtoDiv.innerHTML = `
-            <img src="${produto.imagem}" id="${produto.id}" class='imagem-produto' alt='${produto.descricao}'>
-            <p  class="nome-produto">${produto.nome}</p>
-            <p  class="preco-produto">R$${preco}</p>
-            <p><button class="botao-produto" >Adicionar ao carrinho</button></p>
+            <h2>${produto.nome}</h2>
+            <p>${produto.descricao}</p>
+            <p>Preço: R$${preco}</p>
+            <img src="${produto.imagem}" class='imagem-produto'>
         `;
+        
+        // Adiciona o evento de clique ao produto
+        produtoDiv.addEventListener('click', function() {
+            console.log('Produto clicado:', produto.id); // Verifique o ID
+            localStorage.setItem('produtoSelecionado', produto.id);
+            window.location.href = 'produto.html';
+        });
+
         containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
     });
- }
+}
+
+
+// Função para exibir as informações do produto na página produto.html
+function exibirProduto(produto) {
+    if (produto) {
+        // Limpa o conteúdo da seção 'main'
+        const sectionMain = document.querySelector('#main');
+        sectionMain.innerHTML = '';
+
+        // Cria novos elementos com as informações do produto
+        const produtoContainer = document.createElement('div');
+        produtoContainer.classList.add('produto-detalhes');
+
+        const nomeProduto = document.createElement('h1');
+        nomeProduto.innerText = produto.nome;
+
+        const precoProduto = document.createElement('h3');
+        precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
+
+        const descricaoProduto = document.createElement('p');
+        descricaoProduto.innerText = produto.descricao;
+
+        const imagemProduto = document.createElement('img');
+        imagemProduto.src = produto.imagem;
+        imagemProduto.alt = produto.nome;
+        imagemProduto.classList.add('imagem-produto-detalhe');
+
+        // Adiciona os elementos ao container
+        produtoContainer.appendChild(nomeProduto);
+        produtoContainer.appendChild(imagemProduto);
+        produtoContainer.appendChild(precoProduto);
+        produtoContainer.appendChild(descricaoProduto);
+
+        // Adiciona o container à seção 'main'
+        sectionMain.appendChild(produtoContainer);
+    } else {
+        console.error('Produto não encontrado.');
+    }
+}
 
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
@@ -123,8 +180,21 @@ window.addEventListener("load", function() {
     if (categoria || busca) {
        buscarProdutos(busca, categoria);
     } else {
-        // carregar os dados ao abrir a página (sem filtro)
+        // Carregar os dados ao abrir a página (sem filtro)
         buscarMaisVendidos();
+    }
+  
+    const idProduto = localStorage.getItem('produtoSelecionado');
+    console.log('ID do produto no localStorage:', idProduto); // Verifique se o ID está sendo recuperado
+    
+    if (idProduto) {
+        // Converte o ID armazenado de string para número e busca o produto
+        buscarProdutoPorId(Number(idProduto)).then(produto => {
+            console.log('Produto encontrado:', produto); // Verifique o produto encontrado
+            exibirProduto(produto);
+        });
+    } else {
+        console.log('Nenhum ID de produto encontrado no localStorage.');
     }
 
     let brancoLink = document.querySelector("#branco");
