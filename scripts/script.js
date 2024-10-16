@@ -81,12 +81,6 @@ function getQueryParams() {
     }
 }
 
-// Função para buscar o produto pelo ID no arquivo JSON
-function buscarProdutoPorId(idProduto) {
-    return fetch("scripts/produtos.json")
-        .then((response) => response.json())
-        .then((produtos) => produtos.find(produto => produto.id === idProduto));
-}
 
 function exibirProdutos(produtos) {
     const containerProdutos = document.getElementById('produtos');
@@ -114,51 +108,13 @@ function exibirProdutos(produtos) {
         produtoDiv.addEventListener('click', function() {
             console.log('Produto clicado:', produto.id); // Verifique o ID
             localStorage.setItem('produtoSelecionado', produto.id);
-            window.location.href = 'produto.html';
+            window.location.href = `produto.html?produto=${produto.id}`;
         });
 
         containerProdutos.appendChild(produtoDiv); // Adiciona o novo produto ao contêiner
     });
 }
 
-
-// Função para exibir as informações do produto na página produto.html
-function exibirProduto(produto) {
-    if (produto) {
-        // Limpa o conteúdo da seção 'main'
-        const sectionMain = document.querySelector('#main');
-        sectionMain.innerHTML = '';
-
-        // Cria novos elementos com as informações do produto
-        const produtoContainer = document.createElement('div');
-        produtoContainer.classList.add('produto-detalhes');
-
-        const nomeProduto = document.createElement('h1');
-        nomeProduto.innerText = produto.nome;
-
-        const precoProduto = document.createElement('h3');
-        precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
-
-        const descricaoProduto = document.createElement('p');
-        descricaoProduto.innerText = produto.descricao;
-
-        const imagemProduto = document.createElement('img');
-        imagemProduto.src = produto.imagem;
-        imagemProduto.alt = produto.nome;
-        imagemProduto.classList.add('imagem-produto-detalhe');
-
-        // Adiciona os elementos ao container
-        produtoContainer.appendChild(nomeProduto);
-        produtoContainer.appendChild(imagemProduto);
-        produtoContainer.appendChild(precoProduto);
-        produtoContainer.appendChild(descricaoProduto);
-
-        // Adiciona o container à seção 'main'
-        sectionMain.appendChild(produtoContainer);
-    } else {
-        console.error('Produto não encontrado.');
-    }
-}
 
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
@@ -175,6 +131,12 @@ window.addEventListener("load", function() {
        navegaParaBusca();
     });
 
+    // const produtoId = getProdutoId();
+
+    // if (produtoId != ''){
+    //     buscarProdutoPorId(produtoId);
+    // }
+
     const {categoria, busca} = getQueryParams();
 
     if (categoria || busca) {
@@ -182,19 +144,6 @@ window.addEventListener("load", function() {
     } else {
         // Carregar os dados ao abrir a página (sem filtro)
         buscarMaisVendidos();
-    }
-  
-    const idProduto = localStorage.getItem('produtoSelecionado');
-    console.log('ID do produto no localStorage:', idProduto); // Verifique se o ID está sendo recuperado
-    
-    if (idProduto) {
-        // Converte o ID armazenado de string para número e busca o produto
-        buscarProdutoPorId(Number(idProduto)).then(produto => {
-            console.log('Produto encontrado:', produto); // Verifique o produto encontrado
-            exibirProduto(produto);
-        });
-    } else {
-        console.log('Nenhum ID de produto encontrado no localStorage.');
     }
 
     let brancoLink = document.querySelector("#branco");
@@ -214,5 +163,17 @@ window.addEventListener("load", function() {
         event.preventDefault(); 
         navegaParaBuscaPorCategoria('ao-leite');
     });
+  
+    // const idProduto = localStorage.getItem('produtoSelecionado');
+    // console.log('ID do produto no localStorage:', idProduto); // Verifique se o ID está sendo recuperado
     
+    // if (idProduto) {
+    //     // Converte o ID armazenado de string para número e busca o produto
+    //     buscarProdutoPorId(Number(idProduto)).then(produto => {
+    //         console.log('Produto encontrado:', produto); // Verifique o produto encontrado
+    //         exibirProduto(produto);
+    //     });
+    // } else {
+    //     console.log('Nenhum ID de produto encontrado no localStorage.');
+    // }
 });
