@@ -1,7 +1,7 @@
 function buscarProdutos(busca, categoria) {
     fetch("scripts/produtos.json").then((response) => {
         response.json().then((produtos) => {
-            document.getElementById("produtos-mais-vendidos").innerText = "";
+            document.getElementById("produtos").innerText = "";
 
             let produtosFiltrados = produtos;
 
@@ -20,7 +20,6 @@ function buscarProdutos(busca, categoria) {
 
             // Mostra os produtos filtrados no console
            if (produtosFiltrados.length === 0) {
-                alert('Nenhum produto encontrado');
                 exibirProdutos('');
            } else {
                console.log('Produtos encontrados:', produtosFiltrados);
@@ -35,14 +34,14 @@ function navegaParaBusca() {
 
    const { categoria } = getQueryParams(); 
    if (categoria) {
-       location.href='index.html?categoria=' + categoria + '&busca=' + termoBusca;
+       location.href='busca.html?categoria=' + categoria + '&busca=' + termoBusca;
    } else{
-       location.href="index.html?busca=" + termoBusca;
+       location.href="busca.html?busca=" + termoBusca;
    }
 }
 
 function navegaParaBuscaPorCategoria(categoria) {
-   location.href="index.html?categoria=" + categoria;
+   location.href="busca.html?categoria=" + categoria;
 }
 
 function buscarMaisVendidos() {
@@ -60,6 +59,7 @@ function buscarMaisVendidos() {
 }
 
 function getQueryParams() {
+    console.log(location);
    if (location.href.indexOf('categoria=') != -1) {
        const categoria = location.href.split('categoria=')[1];
        let categoriaDecoded = decodeURI(categoria);
@@ -81,37 +81,25 @@ function getQueryParams() {
     }
 }
 
-window.addEventListener("load", function() {
-    let btnBusca = document.querySelector("#btnBusca");
-
-    btnBusca.addEventListener("click", function() {
-       navegaParaBusca();
-    });
-
-    const {categoria, busca} = getQueryParams();
-
-    if (categoria || busca) {
-       buscarProdutos(busca, categoria);
-    } else {
-        // Carregar os dados ao abrir a página (sem filtro)
-        buscarMaisVendidos();
-    }
-
-    let brancoLink = document.querySelector("#branco");
-    brancoLink.addEventListener("click", function(event) {
-        event.preventDefault(); 
-        navegaParaBuscaPorCategoria('branco');
-    });
-    
-});
+// Função para buscar o produto pelo ID no arquivo JSON
+function buscarProdutoPorId(idProduto) {
+    return fetch("scripts/produtos.json")
+        .then((response) => response.json())
+        .then((produtos) => produtos.find(produto => produto.id === idProduto));
+}
 
 function exibirProdutos(produtos) {
     const containerProdutos = document.getElementById('produtos');
     containerProdutos.innerHTML = ''; // Limpa o contêiner existente
+  
+    if (produtos == ''){
+        containerProdutos.innerHTML = '<h4 id="produto-não-encontrado">Nenhum produto encontrado =(</h4>';
+        return;
+    }
 
     produtos.forEach(produto => {
         const produtoDiv = document.createElement('div');
-        produtoDiv.setAttribute("id", `${produto.id}`);
+        // produtoDiv.setAttribute("id", `${produto.id}`);
         produtoDiv.classList.add('produto-item'); 
         const preco = typeof produto.preco === 'number' ? produto.preco.toFixed(2) : 'Preço indisponível';
         
@@ -133,12 +121,6 @@ function exibirProdutos(produtos) {
     });
 }
 
-// Função para buscar o produto pelo ID no arquivo JSON
-function buscarProdutoPorId(idProduto) {
-    return fetch("scripts/produtos.json")
-        .then((response) => response.json())
-        .then((produtos) => produtos.find(produto => produto.id === idProduto));
-}
 
 // Função para exibir as informações do produto na página produto.html
 function exibirProduto(produto) {
@@ -178,8 +160,30 @@ function exibirProduto(produto) {
     }
 }
 
-// Carregar o produto na página produto.html ao abrir
-window.addEventListener('load', function() {
+window.addEventListener("load", function() {
+    let btnBusca = document.querySelector("#btnBusca");
+    let textoInput = document.getElementById('caixaTexto');
+
+
+    textoInput.addEventListener('keydown', function(event) {
+        if (event.key == 'Enter') {
+            navegaParaBusca();
+        }
+    });
+
+    btnBusca.addEventListener("click", function() {
+       navegaParaBusca();
+    });
+
+    const {categoria, busca} = getQueryParams();
+
+    if (categoria || busca) {
+       buscarProdutos(busca, categoria);
+    } else {
+        // Carregar os dados ao abrir a página (sem filtro)
+        buscarMaisVendidos();
+    }
+  
     const idProduto = localStorage.getItem('produtoSelecionado');
     console.log('ID do produto no localStorage:', idProduto); // Verifique se o ID está sendo recuperado
     
@@ -192,4 +196,23 @@ window.addEventListener('load', function() {
     } else {
         console.log('Nenhum ID de produto encontrado no localStorage.');
     }
+
+    let brancoLink = document.querySelector("#branco");
+    brancoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('branco');
+    });
+
+    let amargoLink = document.querySelector("#amargo");
+    amargoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('amargo');
+    });
+
+    let aoleiteLink = document.querySelector("#ao-leite");
+    aoleiteLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('ao-leite');
+    });
+    
 });

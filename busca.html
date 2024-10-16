@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonka</title>
-    
-    <link rel="stylesheet" href="styles/styleGeral.css">
     <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/styleGeral.css">
+    
 
 </head>
 <body>
+
     <div id="conteudo">
+        <header id="header"></header>
         <nav id="navigator">
             <div id="logo-nav-div">
                 <a href="index.html"><img src="img/wonka-logo.png" alt="Logo do site escrito 'Wonka' com um chápeuzinho no W" id="logo-wonka"></a>
@@ -25,12 +27,18 @@
                 <a href="carrinho.html"><img src="img/carrinho.png" alt="Cesta de compras" id="cesta-nav"></a>
             </div>
         </nav>
-        <input type="text" id="caixaTexto">
-        <button type="button" id="btnBusca" name="btnBusca" class="btn">🔍</button>
-                
-        <h2 id="produtos-mais-vendidos">Mais vendidos</h2>
-        <div id="produtos"></div>
-        <h2 id="novidades-home">Fique por dentro das nossas novidades</h2>
+        <section id="main">
+            <div id="pag-busca">
+                <aside id="filtros">
+                    <h3>Filtros</h3>
+                </aside>
+                <div id="parte-busca">
+                    <input type="text" id="caixaTexto" placeholder="Pesquisar...">
+                    <button type="button" id="btnBusca" name="btnBusca" class="btn"><i class="fa fa-search"></i></button>
+                    <div id="produtos"></div>
+                </div>
+            </div>
+        </section>
         <footer id="footer">
             <p id="footer-principal">Site desenvolvido para o programa TWIST 2024.2</p>
             <p id="footer-nomes">Fernanda Figueiredo <br>
@@ -40,6 +48,8 @@
             <a href="https://github.com/twistpucrio/wonka" target="_blank"> <img src="img/github.png" alt="Logo do site GitHub" id="github-logo"></a>
             <p><a href="sobrenos.html" id="saiba-mais-link">Saiba mais sobre nós</a></p>
         </footer>
+
     </div>
+    
 </body>
 </html>
