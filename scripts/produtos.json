@@ -136,7 +136,7 @@
         "descricao": "Barra de chocolate com recheio de caramelo suave com um toque sutil de flor de sal, que realça o sabor do chocolate ao leite com uma combinação irresistível de doce e salgado.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/BarraAoLCaraSalg.webp",
         "favorito": false
     },
     {
@@ -150,7 +150,7 @@
         "descricao": "Barra de chocolate com recheio cremoso de Nutella que adiciona uma camada extra de sabor ao chocolate ao leite.",
         "carrinho": false,
         "qtd_carrinho": 0,
-        "imagem": "img/placeholder.png",
+        "imagem": "img/BarraAoLeiteNutella.webp",
         "favorito": false
     },
     {
