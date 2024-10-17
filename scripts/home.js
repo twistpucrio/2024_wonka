@@ -98,7 +98,6 @@ function exibirProdutos(produtos) {
             <img src="${produto.imagem}" id="${produto.id}" class='imagem-produto' alt='${produto.descricao}'>
             <p  class="nome-produto">${produto.nome}</p>
             <p  class="preco-produto">R$${preco}</p>
-            <p><button class="botao-produto" >Adicionar ao carrinho</button></p>
         `;
         
         // Adiciona o evento de clique ao produto
