@@ -1,4 +1,4 @@
-function buscarProdutos(busca, categoria, filtros) {
+function buscarProdutos(busca, categoria) {
     fetch("scripts/produtos.json").then((response) => {
         response.json().then((produtos) => {
             document.getElementById("produtos").innerText = "";
@@ -16,12 +16,6 @@ function buscarProdutos(busca, categoria, filtros) {
                produtosFiltrados = produtosFiltrados.filter((produto) =>
                    produto.categoria.toLowerCase() == categoria
                );
-            }
-
-            if (filtros.length != 0){
-                produtosFiltrados = produtosFiltrados.filter((produto) =>
-                    produto.tipo.toLowerCase() == filtros[0]
-                );
             }
 
             // Mostra os produtos filtrados no console
@@ -118,53 +112,9 @@ function exibirProdutos(produtos) {
     });
 }
 
-function mostraTodos(){
-    fetch("scripts/produtos.json").then((response) => {
-        response.json().then((produtos) => {
-            document.getElementById("produtos").innerText = "";
-
-            let produtosFiltrados = produtos;
-
-            // Mostra os produtos filtrados no console
-           if (produtosFiltrados.length === 0) {
-                exibirProdutos('');
-           } else {
-               console.log('Produtos encontrados:', produtosFiltrados);
-               exibirProdutos(produtosFiltrados);
-           }
-        });
-    });
-}
-
-function verificarFiltros() {
-    const selecionados = document.querySelectorAll('input[type="radio"]');
-    let tiposSelecionados = [];
-  
-    selecionados.forEach(selecionado => {
-        if (selecionado.checked) {
-            tiposSelecionados.push(selecionado.id);
-        }
-    });
-  
-    console.log(tiposSelecionados);
-    console.log(location.href);
-
-    const {categoria, busca} = getQueryParams();
-    buscarProdutos(busca, categoria, tiposSelecionados);
-}
-
-function limpaFiltros() {
-    document.querySelectorAll('input[type="radio"]').forEach(selecionado => selecionado.checked = false);
-
-    const {categoria, busca} = getQueryParams();
-    buscarProdutos(busca, categoria, []);
-}
-
 window.addEventListener("load", function() {
     let btnBusca = document.querySelector("#btnBusca");
     let textoInput = document.getElementById('caixaTexto');
-    let btnFiltro = document.getElementById('filtrar');
-    let btnLimpaFiltro = document.getElementById('limpar-filtros');
 
     textoInput.addEventListener('keydown', function(event) {
         if (event.key == 'Enter') {
@@ -176,21 +126,12 @@ window.addEventListener("load", function() {
        navegaParaBusca();
     });
 
-    btnFiltro.addEventListener("click", function(){
-        verificarFiltros(); 
-    });
-
-    btnLimpaFiltro.addEventListener("click", function(){
-        limpaFiltros(); 
-    });
-
     const {categoria, busca} = getQueryParams();
 
     if (categoria || busca) {
-       buscarProdutos(busca, categoria, []);
+       buscarProdutos(busca, categoria);
     } else {
-        // Carregar os dados ao abrir a página (sem filtro)
-        mostraTodos();
+        buscarMaisVendidos();
     }
 
     let brancoLink = document.querySelector("#branco");
@@ -210,4 +151,5 @@ window.addEventListener("load", function() {
         event.preventDefault(); 
         navegaParaBuscaPorCategoria('ao-leite');
     });
+  
 });

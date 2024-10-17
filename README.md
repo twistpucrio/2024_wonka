@@ -9,4 +9,6 @@ O tema do site possui inspirações nos filmes da "Fantástica Fábrica de Choco
 * Luiza Régnier
 * Maria Luiza Dutra
 
+Para poder rodar nosso projeto, sugerimos o uso da extensão do VSCode chamada "Live Server"!
+
 É um projeto do programa TWIST 2024.2 com fins educacionais.
