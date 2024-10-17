@@ -34,7 +34,7 @@ function exibirProduto(produto) {
       
         const botaoCarrinho = document.createElement('button');
         botaoCarrinho.innerText = 'Adicionar ao Carrinho';
-        botaoCarrinho.classList.add('botao-carrinho');
+        botaoCarrinho.classList.add('botaoCarrinho');
         
         botaoCarrinho.addEventListener('click', function () {
             adicionarAoCarrinho(produto); 
