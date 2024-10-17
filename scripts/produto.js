@@ -18,13 +18,17 @@ function exibirProduto(produto) {
         produtoContainer.classList.add('produto-detalhes');
 
         const nomeProduto = document.createElement('h1');
-        nomeProduto.innerText = produto.nome;
+
+        nomeProduto.classList.add('tituloProduto');
+        nomeProduto.innerText = produto[0].nome;
 
         const precoProduto = document.createElement('h3');
         precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
 
-        const descricaoProduto = document.createElement('p');
-        descricaoProduto.innerText = produto.descricao;
+        const descricaoProduto = document.createElement('h4');
+        descricaoProduto.innerText = produto[0].descricao;
+        descricaoProduto.classList.add('descricaoProduto');
+
 
         const imagemProduto = document.createElement('img');
         imagemProduto.src = produto.imagem;
