@@ -31,6 +31,7 @@ function exibirProduto(produto) {
         produtoContainer.classList.add('produto-detalhes');
 
         const nomeProduto = document.createElement('h1');
+        nomeProduto.classList.add('tituloProduto');
         nomeProduto.innerText = produto[0].nome;
 
         const precoProduto = document.createElement('h3');
@@ -38,6 +39,7 @@ function exibirProduto(produto) {
 
         const descricaoProduto = document.createElement('h4');
         descricaoProduto.innerText = produto[0].descricao;
+        descricaoProduto.classList.add('descricaoProduto');
 
         const imagemProduto = document.createElement('img');
         imagemProduto.src = produto[0].imagem;
