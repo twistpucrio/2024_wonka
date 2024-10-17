@@ -231,7 +231,7 @@ body{
 
 /* busca */
 .imagem-produto{
-  width: 30%;
+  width: 40%;
 }
 
 #produtos{
@@ -242,7 +242,7 @@ body{
 }
 
 #produtos div {
-  height: 22rem;
+  height: 19rem;
   border: 1px solid white;
   background-color: white;
   border-radius: 20%;
