@@ -44,11 +44,17 @@ function exibirProduto(produto) {
         imagemProduto.alt = produto[0].nome;
         imagemProduto.classList.add('imagem-produto-detalhe');
 
+        const botaoFavorito = document.createElement('button');
+        botaoFavorito.innerText = 'Adicionar aos Favoritos';
+        botaoFavorito.classList.add('botaoFavorito');
+        
+
         // Adiciona os elementos ao container
         produtoContainer.appendChild(nomeProduto);
         produtoContainer.appendChild(imagemProduto);
         produtoContainer.appendChild(precoProduto);
         produtoContainer.appendChild(descricaoProduto);
+        produtoContainer.appendChild(botaoFavorito);
 
         // Adiciona o container à seção 'main'
         sectionMain.appendChild(produtoContainer);
@@ -57,6 +63,22 @@ function exibirProduto(produto) {
         console.error('Produto não encontrado.');
     }
 }
+
+
+function adicionarFavorito(produto) {
+        const favorito = JSON.parse(localStorage.getItem('favorito')) || []; 
+        const produtoExistente = favorito.find(item => item.id === produto.id);
+    
+        if (produtoExistente) {
+            alert('Este produto já está nos favoritos!');
+        } else {
+            produto.favorito = true;
+            favorito.push(produto); 
+            localStorage.setItem('favorito', JSON.stringify(favorito)); 
+            alert('Produto favoritado com sucesso!');
+        }
+    }
+    
 
 function getProdutoId(){
     if (location.href.indexOf('produto=') != -1) {
