@@ -2,6 +2,10 @@
 
 body{
   margin: 0 auto;
+  background-color: #6e3b26;
+}
+
+#conteudo{
   background-color: #faead7;
 }
 
@@ -334,7 +338,7 @@ body{
   width: 12rem;
   float: left;
   background-color: rgb(230, 170, 92);
-  margin: 1rem 0.5rem 0rem 0.5rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
   padding: 1rem;
   border-radius: 20%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -357,7 +361,7 @@ body{
 }
 
 #filtrar{
-  font-size: large;
+  font-size: 1.1rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-radius: 10%;
   border: none;
@@ -378,12 +382,41 @@ body{
   background: #8a523a;
 }
 
+#limpar-filtros{
+  font-size: small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 10%;
+  border: none;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+  padding: 0.4rem;
+  color: #8a523a;
+  background: ghostwhite ;
+  font-weight: bolder;
+  letter-spacing: 0.03em;
+  border-radius: 0.8em;
+}
+
+#limpar-filtros:hover{
+  background: rgb(231, 231, 240) ;
+}
+
+#limpar-filtros:active{
+  background: ghostwhite ;
+}
+
 #parte-busca{
   height: 100%;
 }
 
 #pag-busca{
   display: flex;
+}
+
+#produto-não-encontrado{
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 1rem;
 }
 
 /* fim busca */
