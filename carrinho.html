@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonka</title>
     <link rel="stylesheet" href="styles/styleGeral.css">
+    <link rel="stylesheet" href="styles/styleCarrinho.css">
     <script src="scripts/carrinho.js"></script>
 
 </head>
@@ -16,9 +17,9 @@
                 <a href="index.html"><img src="img/wonka-logo.png" alt="Logo do site escrito 'Wonka' com um chápeuzinho no W" id="logo-wonka"></a>
             </div>
             <div id="texto-nav-div">
-                <a href="branco.html" class="nav-texto">Branco</a>
-                <a href="aoLeite.html" class="nav-texto">Ao Leite</a>
-                <a href="amargo.html" class="nav-texto">Amargo</a>
+                <a href="branco.html" class="nav-texto" id="branco">Branco</a>
+                <a href="aoLeite.html" class="nav-texto" id="ao-leite">Ao Leite</a>
+                <a href="amargo.html" class="nav-texto" id="amargo">Amargo</a>
             </div>
             <div id="imagens-nav-div">
                 <a href="favoritos.html"><img src="img/coracao3.png" alt="Coração vermelho" id="coracao-nav"></a>
@@ -26,7 +27,13 @@
             </div>
         </nav>
         <section id="main">
-            <h1>Carrinho de compras</h1>
+            <h1 id="tituloCarrinho">Carrinho de compras</h1>
+            <div id="titulos-carrinho">
+                <p id="produto-titulo">Produto</p>
+                <p id="produto-preco">Preço</p>
+                <p id="produto-qtd">Quantidade</p>
+                <p id="produto-subtotal">Subtotal</p>
+            </div>
             <div id="produto">
 
             </div>

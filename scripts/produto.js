@@ -78,9 +78,31 @@ function getProdutoId() {
     return '';
 }
 
-window.onload = function () {
+function navegaParaBuscaPorCategoria(categoria) {
+    location.href="busca.html?categoria=" + categoria;
+}
+
+window.addEventListener("load", function() {
     const produtoId = getProdutoId();
     if (produtoId) {
         buscarProdutoPorId(produtoId);
     }
-};
+
+    let brancoLink = document.querySelector("#branco");
+    brancoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('branco');
+    });
+
+    let amargoLink = document.querySelector("#amargo");
+    amargoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('amargo');
+    });
+
+    let aoleiteLink = document.querySelector("#ao-leite");
+    aoleiteLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('ao-leite');
+    });
+});

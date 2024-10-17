@@ -27,9 +27,16 @@ function carregarCarrinho() {
         nomeProduto.innerText = produto.nome;
 
         const qtdProduto = document.createElement('p');
-        qtdProduto.innerText = `quantidade: ${produto.qtd_carrinho}`
+        qtdProduto.classList.add('qtd-preco');
+        qtdProduto.innerText = `${produto.qtd_carrinho}`
+
+        const subTotal = produto.qtd_carrinho * produto.preco;
+        const subTotalProduto = document.createElement('p');
+        subTotalProduto.classList.add('produto-subtotal');
+        subTotalProduto.innerText = `R$ ${subTotal.toFixed(2)}`;
 
         const precoProduto = document.createElement('p');
+        precoProduto.classList.add('produto-preco');
         precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
 
         const imagemProduto = document.createElement('img');
@@ -38,7 +45,7 @@ function carregarCarrinho() {
         imagemProduto.classList.add('imagem-produto-carrinho');
 
         const btnRetirar = document.createElement('button');
-        btnRetirar.innerText = 'Retirar do Carrinho';
+        btnRetirar.innerHTML = '<img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Círculo vermelho com um X branco no meio" border="0" class="imgBtnRetirar" />';
         btnRetirar.classList.add('btnRetirar');
         
         btnRetirar.addEventListener('click', function () {
@@ -49,15 +56,37 @@ function carregarCarrinho() {
         produtoDiv.appendChild(nomeProduto);
         produtoDiv.appendChild(precoProduto);
         produtoDiv.appendChild(qtdProduto);
+        produtoDiv.appendChild(subTotalProduto);
         produtoDiv.appendChild(btnRetirar);
         carrinhoContainer.appendChild(produtoDiv);
     });
 }
 
+function navegaParaBuscaPorCategoria(categoria) {
+    location.href="busca.html?categoria=" + categoria;
+}
 
-window.onload = function () {
+window.addEventListener("load", function() {
     carregarCarrinho();
-};
+
+    let brancoLink = document.querySelector("#branco");
+    brancoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('branco');
+    });
+
+    let amargoLink = document.querySelector("#amargo");
+    amargoLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('amargo');
+    });
+
+    let aoleiteLink = document.querySelector("#ao-leite");
+    aoleiteLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        navegaParaBuscaPorCategoria('ao-leite');
+    });
+});
 
 
 
