@@ -35,6 +35,14 @@ function exibirProduto(produto) {
         imagemProduto.alt = produto.nome;
         imagemProduto.classList.add('imagem-produto-detalhe');
 
+
+        const botaoFavorito = document.createElement('button');
+        botaoFavorito.innerText = 'Adicionar aos Favoritos';
+        botaoFavorito.classList.add('botaoFavorito');
+        
+
+        // Adiciona os elementos ao container
+
       
         const botaoCarrinho = document.createElement('button');
         botaoCarrinho.innerText = 'Adicionar ao Carrinho';
@@ -49,14 +57,29 @@ function exibirProduto(produto) {
         produtoContainer.appendChild(imagemProduto);
         produtoContainer.appendChild(precoProduto);
         produtoContainer.appendChild(descricaoProduto);
+        produtoContainer.appendChild(botaoFavorito);
         produtoContainer.appendChild(botaoCarrinho);
-
         sectionMain.appendChild(produtoContainer);
     } else {
         console.error('Produto não encontrado.');
     }
 }
 
+
+function adicionarFavorito(produto) {
+        const favorito = JSON.parse(localStorage.getItem('favorito')) || []; 
+        const produtoExistente = favorito.find(item => item.id === produto.id);
+    
+        if (produtoExistente) {
+            alert('Este produto já está nos favoritos!');
+        } else {
+            produto.favorito = true;
+            favorito.push(produto); 
+            localStorage.setItem('favorito', JSON.stringify(favorito)); 
+            alert('Produto favoritado com sucesso!');
+        }
+    }
+    
 
 function adicionarAoCarrinho(produto) {
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
