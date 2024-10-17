@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Wonka</title>
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/styleGeral.css">
@@ -30,7 +31,16 @@
         <section id="main">
             <div id="pag-busca">
                 <aside id="filtros">
-                    <h3>Filtros</h3>
+                    <div id="filtro-busca">
+                        <legend class="filtros-legenda">Filtros</legend>
+                        <label for="barra"><input type="radio" class="botao-filtro" id="barra" name="filtro" >Barra <br></label>
+                        <label for="trufa"><input type="radio" class="botao-filtro" id="trufa" name="filtro" >Trufa <br></label>
+                        <label for="bombom"><input type="radio" class="botao-filtro" id="bombom" name="filtro" >Bombom <br></label>
+                        <div id="btnFiltra">
+                            <button id="filtrar">Aplicar filtros</button>
+                            <button id="limpar-filtros">Limpar filtros</button>
+                        </div>
+                    </div>
                 </aside>
                 <div id="parte-busca">
                     <input type="text" id="caixaTexto" placeholder="Pesquisar...">
