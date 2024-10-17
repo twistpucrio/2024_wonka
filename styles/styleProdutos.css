@@ -63,3 +63,31 @@ h3 {
     
     
 }
+
+.botaoCarrinho{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border: 0;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    color: #6e3b26;
+    background-color: #faead7;
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    width: 13rem;
+    height: 2.6rem;
+  
+    background: #8a523a;
+    color: ghostwhite;
+    overflow: hidden;
+    margin-left: 58%;
+  }
+  
+  .botaoCarrinho:hover{
+    background: #6e3b26;
+  }
+  
+  .botaoCarrinho:active {
+    transform: scale(0.95);
+  }
