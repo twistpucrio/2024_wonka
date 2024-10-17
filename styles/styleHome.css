@@ -1,0 +1,11 @@
+#produtos {
+    background-image: url('../img/ticket.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    width: 90%;
+    height:25rem; 
+}
+#produtos div {
+    margin-left: 15rem;
+}
