@@ -86,7 +86,7 @@ function carregarCarrinho() {
         });
 
         precoDiv.appendChild(btnRem);
-        precoDiv.appendChild(precoProduto);
+        precoDiv.appendChild(qtdProduto);
         precoDiv.appendChild(btnAdd);
 
         const imagemProduto = document.createElement('img');
@@ -104,8 +104,8 @@ function carregarCarrinho() {
 
         produtoDiv.appendChild(imagemProduto);
         produtoDiv.appendChild(nomeProduto);
+        produtoDiv.appendChild(precoProduto);
         produtoDiv.appendChild(precoDiv);
-        produtoDiv.appendChild(qtdProduto);
         produtoDiv.appendChild(subTotalProduto);
         produtoDiv.appendChild(btnRetirar);
         carrinhoContainer.appendChild(produtoDiv);

@@ -45,13 +45,13 @@
 }
 
 #produto-titulo{
-    padding-left: 23rem;
+    padding-left: 23.5rem;
     padding-right: 4rem;
 }
 
 #produto-preco{
     padding-left: 19.2rem;
-    padding-right: 5.2rem;
+    padding-right: 5rem;
 }
 
 #produto-qtd{
@@ -90,7 +90,8 @@
 }
 
 .produto-preco{
-    padding: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .produto-subtotal{
@@ -98,12 +99,11 @@
 }
 
 .qtd-preco{
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 1rem;
 }
 
 .precoCarrinho{
-    width: 14%;
+    width: 11%;
     display: flex;
 }
 

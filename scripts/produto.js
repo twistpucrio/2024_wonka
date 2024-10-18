@@ -69,24 +69,12 @@ function adicionarAoCarrinho(produto) {
 
 
     let modal = document.getElementById("modal_carrinho");
+    let btnVoltaProduto = document.getElementById("botaoModalVolta");
+    let btnVaiCarrinho = document.getElementById("botaoModalCarrinho");
 
-    const innerModal = document.createElement('div');
-    innerModal.classList.add('modal_carrinho-inner');
-
-    const tituloModal = document.createElement('h2');
-    tituloModal.innerText = "Produto adicionado ao Carrinho com sucesso!";
-
-    const btnVoltaProduto = document.createElement('button');
-    btnVoltaProduto.innerText = 'Continuar comprando';
-    btnVoltaProduto.classList.add('botaoCarrinhoModal');
-        
     btnVoltaProduto.addEventListener('click', function () {
         modal.classList.remove("open");
     });
-
-    const btnVaiCarrinho = document.createElement('button');
-    btnVaiCarrinho.innerText = 'Ir para o Carrinho';
-    btnVaiCarrinho.classList.add('botaoCarrinhoModal');
         
     btnVaiCarrinho.addEventListener('click', function () {
         location.href="carrinho.html"; 
