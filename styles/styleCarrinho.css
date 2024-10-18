@@ -1,3 +1,25 @@
+.mensagem-carrinho{
+    margin-top: 5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 21rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    color: darkred;
+}
+
+#total-produto{
+    text-align: right;
+    margin-right: 14%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+    
+}
+
 .imagem-produto-carrinho{
     width: 10rem;
     border-radius: 10%;
@@ -23,13 +45,13 @@
 }
 
 #produto-titulo{
-    padding-left: 25rem;
-    padding-right: 2rem;
+    padding-left: 23rem;
+    padding-right: 4rem;
 }
 
 #produto-preco{
-    padding-left: 18rem;
-    padding-right: 3rem;
+    padding-left: 19.2rem;
+    padding-right: 5.2rem;
 }
 
 #produto-qtd{
@@ -42,18 +64,14 @@
 }
 
 .produtoCarrinho{
-    /* text-align: center; */
     display: flex;
-    margin-left: 13%;
-    margin-right: 13%;
-    /* margin-left: 16rem;
-    margin-right: 16rem; */
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 2rem 2rem 2rem 2rem;
     align-items: center;
     justify-content: center;
-    /* border: 2px #8a523a solid; */
     background-color: rgb(255, 255, 255);
     border-radius: 2.5rem;
 }
@@ -61,7 +79,6 @@
 .produtoCarrinho h2{
     margin-right: 1rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: right;
     text-align: center;
     padding: 0rem 1rem 0rem 2rem;
     width: 40%;
@@ -73,7 +90,7 @@
 }
 
 .produto-preco{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .produto-subtotal{
@@ -85,21 +102,26 @@
     padding-right: 5rem;
 }
 
-.btnRetirar{
+.precoCarrinho{
+    width: 14%;
+    display: flex;
+}
+
+.btnCarrinho{
     border: none;
     cursor: pointer;
     appearance: none;
     background-color: inherit;
 }
 
-.imgBtnRetirar{
+.imgBtnCarrinho{
     width:2rem;
 }
 
-.imgBtnRetirar:hover{
-    filter: brightness(80%);
+.imgBtnCarrinho:hover{
+    filter: brightness(85%);
 }
 
-.imgBtnRetirar:active{
+.imgBtnCarrinho:active{
     filter: brightness(100%);
 }
