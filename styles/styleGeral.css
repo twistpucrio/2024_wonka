@@ -232,6 +232,7 @@ body{
 /* busca */
 .imagem-produto{
   width: 40%;
+  border-radius: 10%;
 }
 
 #produtos{
