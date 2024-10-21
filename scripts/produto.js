@@ -20,13 +20,13 @@ function exibirProduto(produto) {
         const nomeProduto = document.createElement('h1');
 
         nomeProduto.classList.add('tituloProduto');
-        nomeProduto.innerText = produto[0].nome;
+        nomeProduto.innerText = produto.nome;
 
         const precoProduto = document.createElement('h3');
         precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
 
         const descricaoProduto = document.createElement('h4');
-        descricaoProduto.innerText = produto[0].descricao;
+        descricaoProduto.innerText = produto.descricao;
         descricaoProduto.classList.add('descricaoProduto');
 
 
@@ -38,7 +38,7 @@ function exibirProduto(produto) {
 
         const botaoFavorito = document.createElement('button');
         botaoFavorito.innerText = 'Adicionar aos Favoritos';
-        botaoFavorito.classList.add('botaoFavorito');
+        botaoFavorito.classList.add('botao-produto');
         
 
         // Adiciona os elementos ao container
@@ -46,7 +46,7 @@ function exibirProduto(produto) {
       
         const botaoCarrinho = document.createElement('button');
         botaoCarrinho.innerText = 'Adicionar ao Carrinho';
-        botaoCarrinho.classList.add('botaoCarrinho');
+        botaoCarrinho.classList.add('botao-produto');
         
         botaoCarrinho.addEventListener('click', function () {
             adicionarAoCarrinho(produto); 
