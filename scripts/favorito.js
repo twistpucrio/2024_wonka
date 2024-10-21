@@ -1,13 +1,13 @@
 
 function removerDoFavorito(id) {
-    const produtosFavorito = JSON.parse(localStorage.getItem('favorito')) || [];
+    const produtosFavorito = JSON.parse(sessionStorage.getItem('favorito')) || [];
     const produtosAtualizados = produtosFavorito.filter(produto => produto.id !== id);
-    localStorage.setItem('favorito', JSON.stringify(produtosAtualizados));
+    sessionStorage.setItem('favorito', JSON.stringify(produtosAtualizados));
     window.location.reload();
 }
 
 function carregarFavorito() {
-    const produtosFavorito = JSON.parse(localStorage.getItem('favorito')) || [];
+    const produtosFavorito = JSON.parse(sessionStorage.getItem('favorito')) || [];
 
     const favoritoContainer = document.querySelector('#favoritados');
 

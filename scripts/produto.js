@@ -41,7 +41,10 @@ function exibirProduto(produto) {
         botaoFavorito.classList.add('botao-produto');
         
 
-        // Adiciona os elementos ao container
+        botaoFavorito.addEventListener('click', function () {
+            adicionarFavorito(produto); // Chama a função de adicionar aos favoritos
+        });
+
 
       
         const botaoCarrinho = document.createElement('button');
@@ -67,7 +70,7 @@ function exibirProduto(produto) {
 
 
 function adicionarFavorito(produto) {
-        const favorito = JSON.parse(localStorage.getItem('favorito')) || []; 
+        const favorito = JSON.parse(sessionStorage.getItem('favorito')) || []; 
         const produtoExistente = favorito.find(item => item.id === produto.id);
     
         if (produtoExistente) {
@@ -75,7 +78,8 @@ function adicionarFavorito(produto) {
         } else {
             produto.favorito = true;
             favorito.push(produto); 
-            localStorage.setItem('favorito', JSON.stringify(favorito)); 
+            sessionStorage.setItem('favorito', JSON.stringify(favorito)); 
+            console.log(sessionStorage.getItem('favorito')); 
             alert('Produto favoritado com sucesso!');
         }
     }
