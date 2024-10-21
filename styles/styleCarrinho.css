@@ -27,6 +27,10 @@
     margin-left: 1rem;
 }
 
+.imagem-produto-carrinho:hover{
+    cursor: pointer;
+}
+
 #tituloCarrinho{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
@@ -38,25 +42,27 @@
     display: flex;
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
-    margin-left: 20%;
-    margin-right: 20%;
     margin-bottom: -2.5rem;
     color: gray;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #produto-titulo{
-    padding-left: 23.5rem;
-    padding-right: 4rem;
+    width:63%;
 }
 
 #produto-preco{
-    padding-left: 19.2rem;
-    padding-right: 5rem;
+    width:10%;
 }
 
 #produto-qtd{
-    padding-left: 2rem;
-    padding-right: 4.5rem;
+    width:13.3%;
+}
+
+#produto-subtotal{
+    width:10%;
 }
 
 #produto{

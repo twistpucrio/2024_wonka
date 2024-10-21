@@ -24,6 +24,7 @@ function exibirProduto(produto) {
 
         const precoProduto = document.createElement('h3');
         precoProduto.innerText = `R$ ${produto.preco.toFixed(2)}`;
+        precoProduto.classList.add('precoProduto');
 
         const descricaoProduto = document.createElement('h4');
         descricaoProduto.innerText = produto.descricao;
@@ -38,27 +39,31 @@ function exibirProduto(produto) {
 
         const botaoFavorito = document.createElement('button');
         botaoFavorito.innerText = 'Adicionar aos Favoritos';
-        botaoFavorito.classList.add('botao-produto');
+        botaoFavorito.classList.add('botao-em-produtos');
         
 
         // Adiciona os elementos ao container
 
+        const descricoesContainer = document.createElement('div');
+        descricoesContainer.classList.add('produto-descricoes');
       
         const botaoCarrinho = document.createElement('button');
         botaoCarrinho.innerText = 'Adicionar ao Carrinho';
-        botaoCarrinho.classList.add('botao-produto');
+        botaoCarrinho.classList.add('botao-em-produtos');
         
         botaoCarrinho.addEventListener('click', function () {
             adicionarAoCarrinho(produto); 
         });
 
+        descricoesContainer.appendChild(nomeProduto);
+        descricoesContainer.appendChild(precoProduto);
+        descricoesContainer.appendChild(descricaoProduto);
+        descricoesContainer.appendChild(botaoFavorito);
+        descricoesContainer.appendChild(botaoCarrinho);
     
-        produtoContainer.appendChild(nomeProduto);
         produtoContainer.appendChild(imagemProduto);
-        produtoContainer.appendChild(precoProduto);
-        produtoContainer.appendChild(descricaoProduto);
-        produtoContainer.appendChild(botaoFavorito);
-        produtoContainer.appendChild(botaoCarrinho);
+        produtoContainer.appendChild(descricoesContainer);
+        
         sectionMain.appendChild(produtoContainer);
     } else {
         console.error('Produto não encontrado.');

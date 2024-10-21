@@ -94,6 +94,12 @@ function carregarCarrinho() {
         imagemProduto.alt = produto.nome;
         imagemProduto.classList.add('imagem-produto-carrinho');
 
+        imagemProduto.addEventListener('click', function() {
+            console.log('Produto clicado:', produto.id); // Verifique o ID
+            localStorage.setItem('produtoSelecionado', produto.id);
+            window.location.href = `produto.html?produto=${produto.id}`;
+        });
+
         const btnRetirar = document.createElement('button');
         btnRetirar.innerHTML = '<img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Círculo vermelho com um X branco no meio" border="0" class="imgBtnCarrinho" />';
         btnRetirar.classList.add('btnCarrinho');
