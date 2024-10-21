@@ -21,6 +21,7 @@ function carregarFavorito() {
     produtosFavorito.forEach(produto => {
         const produtoDiv = document.createElement('div');
         produtoDiv.classList.add('produtoFavorito');
+        produtoDiv.classList.add('produto-favorito');
 
         const nomeProduto = document.createElement('h2');
         nomeProduto.innerText = produto.nome;
