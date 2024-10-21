@@ -38,7 +38,7 @@ function exibirProduto(produto) {
 
         const botaoFavorito = document.createElement('button');
         botaoFavorito.innerText = 'Adicionar aos Favoritos';
-        botaoFavorito.classList.add('botaoFavorito');
+        botaoFavorito.classList.add('botao-produto');
         
 
         // Adiciona os elementos ao container
@@ -46,7 +46,7 @@ function exibirProduto(produto) {
       
         const botaoCarrinho = document.createElement('button');
         botaoCarrinho.innerText = 'Adicionar ao Carrinho';
-        botaoCarrinho.classList.add('botaoCarrinho');
+        botaoCarrinho.classList.add('botao-produto');
         
         botaoCarrinho.addEventListener('click', function () {
             adicionarAoCarrinho(produto); 
